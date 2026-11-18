@@ -1,0 +1,668 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Steel City Sharpening | Mobile & Pickup Knife Sharpening in Pittsburgh</title>
+    <meta name="description" content="Professional knife, artisan whetstone, kitchen shear, and garden tool sharpening in Carnegie & Greater Pittsburgh. Free local pickup & delivery within 15 miles (3-item minimum).">
+    <style>
+        :root {
+            --bg-color: #111113;
+            --card-bg: #19191d;
+            --card-hover: #202026;
+            --accent: #f97316; /* Forge Orange */
+            --accent-hover: #ea580c;
+            --gold: #eab308; /* Artisan Tier Accent */
+            --text-main: #f4f4f5;
+            --text-muted: #a1a1aa;
+            --border: #27272a;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+        }
+
+        /* Header */
+        header {
+            background: rgba(17, 17, 19, 0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid var(--border);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.25rem;
+            font-weight: 900;
+            letter-spacing: 0.5px;
+            color: var(--text-main);
+            text-transform: uppercase;
+            text-decoration: none;
+        }
+
+        .logo span {
+            color: var(--accent);
+        }
+
+        .header-actions {
+            display: flex;
+            gap: 0.75rem;
+            align-items: center;
+        }
+
+        .nav-phone {
+            background: var(--accent);
+            color: #fff;
+            padding: 0.55rem 1.1rem;
+            border-radius: 4px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 0.9rem;
+            transition: background 0.2s;
+        }
+
+        .nav-phone:hover {
+            background: var(--accent-hover);
+        }
+
+        /* Hero Section */
+        .hero {
+            padding: 6rem 2rem;
+            text-align: center;
+            background: linear-gradient(rgba(17, 17, 19, 0.82), rgba(17, 17, 19, 0.96)), 
+                        url('https://images.unsplash.com/photo-1589365278144-c9e705f423ba?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .badge {
+            display: inline-block;
+            background: rgba(249, 115, 22, 0.15);
+            color: var(--accent);
+            border: 1px solid rgba(249, 115, 22, 0.4);
+            padding: 0.35rem 0.9rem;
+            border-radius: 999px;
+            font-size: 0.85rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 1.25rem;
+        }
+
+        .hero h1 {
+            font-size: clamp(2.1rem, 5vw, 3.6rem);
+            margin-bottom: 1rem;
+            font-weight: 900;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            line-height: 1.15;
+        }
+
+        .hero p {
+            font-size: clamp(1.05rem, 2vw, 1.25rem);
+            color: var(--text-muted);
+            max-width: 680px;
+            margin: 0 auto 2.25rem auto;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .btn-primary {
+            display: inline-block;
+            background: var(--accent);
+            color: white;
+            padding: 0.9rem 2rem;
+            font-size: 1rem;
+            font-weight: 700;
+            border-radius: 4px;
+            text-decoration: none;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            transition: background 0.2s, transform 0.1s;
+        }
+
+        .btn-primary:hover {
+            background: var(--accent-hover);
+            transform: translateY(-2px);
+        }
+
+        .btn-secondary {
+            display: inline-block;
+            background: transparent;
+            color: var(--text-main);
+            border: 1px solid var(--border);
+            padding: 0.9rem 2rem;
+            font-size: 1rem;
+            font-weight: 700;
+            border-radius: 4px;
+            text-decoration: none;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            transition: border-color 0.2s, background 0.2s;
+        }
+
+        .btn-secondary:hover {
+            border-color: var(--text-muted);
+            background: rgba(255, 255, 255, 0.05);
+        }
+
+        /* Highlights Strip */
+        .highlights {
+            background: var(--card-bg);
+            border-bottom: 1px solid var(--border);
+            padding: 1.5rem 2rem;
+        }
+
+        .highlights-inner {
+            max-width: 1100px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 1.25rem;
+            text-align: center;
+        }
+
+        .highlight-item strong {
+            display: block;
+            color: var(--accent);
+            font-size: 0.95rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .highlight-item span {
+            font-size: 0.9rem;
+            color: var(--text-muted);
+        }
+
+        /* Sections */
+        section {
+            padding: 4.5rem 2rem;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        section h2 {
+            text-align: center;
+            font-size: 2rem;
+            margin-bottom: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .section-subtitle {
+            text-align: center;
+            color: var(--text-muted);
+            max-width: 620px;
+            margin: 0 auto 3rem auto;
+            font-size: 1rem;
+        }
+
+        /* Services & Pricing */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .service-card {
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: 6px;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            transition: border-color 0.2s;
+        }
+
+        .service-card:hover {
+            border-color: var(--accent);
+        }
+
+        .service-card.artisan {
+            border-color: rgba(234, 179, 8, 0.45);
+        }
+
+        .service-card.artisan:hover {
+            border-color: var(--gold);
+        }
+
+        .artisan-tag {
+            display: inline-block;
+            background: rgba(234, 179, 8, 0.15);
+            color: var(--gold);
+            font-size: 0.75rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            padding: 0.2rem 0.6rem;
+            border-radius: 4px;
+            margin-bottom: 0.6rem;
+        }
+
+        .service-img {
+            width: 100%;
+            height: 165px;
+            object-fit: cover;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .service-content {
+            padding: 1.5rem;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .service-card h3 {
+            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
+            color: var(--text-main);
+        }
+
+        .service-card p {
+            color: var(--text-muted);
+            font-size: 0.92rem;
+            margin-bottom: 1.25rem;
+        }
+
+        .price {
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: var(--accent);
+        }
+
+        .service-card.artisan .price {
+            color: var(--gold);
+        }
+
+        .price-note {
+            font-size: 0.8rem;
+            color: var(--text-muted);
+            display: block;
+            margin-top: 0.2rem;
+        }
+
+        .pricing-disclaimer {
+            margin-top: 2.25rem;
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            border-left: 4px solid var(--accent);
+            padding: 1.35rem 1.6rem;
+            border-radius: 4px;
+            font-size: 0.92rem;
+            color: var(--text-muted);
+            line-height: 1.7;
+        }
+
+        .pricing-disclaimer strong {
+            color: var(--text-main);
+        }
+
+        /* Process */
+        .process-steps {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.75rem;
+            text-align: center;
+        }
+
+        .step {
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            padding: 2.25rem 1.5rem;
+            border-radius: 6px;
+        }
+
+        .step-number {
+            display: inline-block;
+            width: 44px;
+            height: 44px;
+            background: var(--accent);
+            color: white;
+            font-weight: 800;
+            font-size: 1.1rem;
+            line-height: 44px;
+            border-radius: 50%;
+            margin-bottom: 1rem;
+        }
+
+        .step h3 {
+            margin-bottom: 0.5rem;
+            font-size: 1.2rem;
+        }
+
+        .step p {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+        }
+
+        /* Contact Section */
+        .contact-wrapper {
+            display: grid;
+            grid-template-columns: 1fr 1.2fr;
+            gap: 2.5rem;
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: 6px;
+            padding: 2.5rem;
+        }
+
+        .contact-info h3 {
+            font-size: 1.4rem;
+            margin-bottom: 1rem;
+        }
+
+        .contact-info p {
+            color: var(--text-muted);
+            margin-bottom: 1.5rem;
+            font-size: 0.95rem;
+        }
+
+        .contact-detail {
+            margin-bottom: 1.25rem;
+        }
+
+        .contact-detail strong {
+            display: block;
+            color: var(--accent);
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .contact-detail a {
+            color: var(--text-main);
+            text-decoration: none;
+            font-size: 1.1rem;
+            font-weight: 600;
+        }
+
+        .contact-detail a:hover {
+            color: var(--accent);
+        }
+
+        .form-group {
+            margin-bottom: 1.15rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.4rem;
+            font-weight: 600;
+            font-size: 0.9rem;
+        }
+
+        .form-group input, .form-group textarea {
+            width: 100%;
+            padding: 0.75rem;
+            background: var(--bg-color);
+            border: 1px solid var(--border);
+            border-radius: 4px;
+            color: white;
+            font-family: inherit;
+            font-size: 0.95rem;
+        }
+
+        .form-group input:focus, .form-group textarea:focus {
+            outline: none;
+            border-color: var(--accent);
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            height: 110px;
+        }
+
+        .form-submit {
+            width: 100%;
+            border: none;
+            cursor: pointer;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 3rem 2rem;
+            border-top: 1px solid var(--border);
+            color: var(--text-muted);
+            font-size: 0.85rem;
+        }
+
+        @media (max-width: 768px) {
+            .contact-wrapper {
+                grid-template-columns: 1fr;
+                padding: 1.75rem;
+            }
+        }
+
+        @media (max-width: 600px) {
+            header { padding: 1rem; }
+            .hero { padding: 4rem 1.25rem; }
+            section { padding: 3.5rem 1.25rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <a href="#" class="logo">Steel City <span>Sharpening</span></a>
+        <div class="header-actions">
+            <a href="tel:4128973119" class="nav-phone">Call / Text: (412) 897-3119</a>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="badge">Carnegie & Greater Pittsburgh Area</div>
+        <h1>Razor-Sharp Edges,<br>Picked Up At Your Door</h1>
+        <p>Professional sharpening for kitchen knives, outdoor & pocket blades, artisan whetstone edges, kitchen shears, and garden tools. Fast 24-hour turnaround with free local pickup and delivery.</p>
+        <div class="hero-buttons">
+            <a href="sms:4128973119" class="btn-primary">Text to Schedule Pickup</a>
+            <a href="#pricing" class="btn-secondary">View Pricing</a>
+        </div>
+    </section>
+
+    <div class="highlights">
+        <div class="highlights-inner">
+            <div class="highlight-item">
+                <strong>Free Pickup & Delivery</strong>
+                <span>Within 15 miles of Carnegie (3-item min)</span>
+            </div>
+            <div class="highlight-item">
+                <strong>24-Hour Turnaround</strong>
+                <span>Same-day rush available (+$10 fee)</span>
+            </div>
+            <div class="highlight-item">
+                <strong>Upfront Pricing</strong>
+                <span>No hidden fees or surprise charges</span>
+            </div>
+        </div>
+    </div>
+
+    <section id="pricing">
+        <h2>Services & Upfront Pricing</h2>
+        <p class="section-subtitle">Precision sharpening tailored to each blade's steel and geometry.</p>
+        
+        <div class="services-grid">
+            <div class="service-card">
+                <img src="https://images.unsplash.com/photo-1593618998160-e34014e67546?auto=format&fit=crop&w=600&q=80" alt="Chef knives" class="service-img">
+                <div class="service-content">
+                    <div>
+                        <h3>Kitchen & Chef Knives</h3>
+                        <p>Chef's knives, santoku, paring, utility, carving, and bread/serrated knives restored to factory-new sharpness.</p>
+                    </div>
+                    <div>
+                        <div class="price">$8 <span style="font-size: 1rem; font-weight: 500;">/ knife</span></div>
+                        <span class="price-note">+$3–$5 for broken tip or heavy chip repair</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="service-card">
+                <img src="https://images.unsplash.com/photo-1542362567-b07e54358753?auto=format&fit=crop&w=600&q=80" alt="Pocket and outdoor knives" class="service-img">
+                <div class="service-content">
+                    <div>
+                        <h3>Pocket, Hunting & Outdoor</h3>
+                        <p>Folding EDC knives, fixed-blade hunting knives, camp knives, and bushcraft blades.</p>
+                    </div>
+                    <div>
+                        <div class="price">$8 <span style="font-size: 1rem; font-weight: 500;">/ knife</span></div>
+                        <span class="price-note">Custom bevel angles available on request</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="service-card artisan">
+                <img src="https://images.unsplash.com/photo-1616486029423-aaa4789e8c9a?auto=format&fit=crop&w=600&q=80" alt="Artisan hand whetstone sharpening" class="service-img">
+                <div class="service-content">
+                    <div>
+                        <span class="artisan-tag">Knives Only • Premium Care</span>
+                        <h3>Artisan Hand-Whetstone</h3>
+                        <p>100% hand-sharpened and polished on Japanese water stones through high-grit progression and leather strop. Ideal for high-end Japanese steel, custom, and collector knives.</p>
+                    </div>
+                    <div>
+                        <div class="price">$18 <span style="font-size: 1rem; font-weight: 500;">/ knife</span></div>
+                        <span class="price-note">24–48 hr turnaround (not eligible for same-day rush)</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="service-card">
+                <img src="https://images.unsplash.com/photo-1589939705384-5185137a7f0f?auto=format&fit=crop&w=600&q=80" alt="Kitchen shears" class="service-img">
+                <div class="service-content">
+                    <div>
+                        <h3>Kitchen Shears</h3>
+                        <p>Heavy-duty kitchen shears, poultry shears, and standard household scissors.</p>
+                    </div>
+                    <div>
+                        <div class="price">$10 <span style="font-size: 1rem; font-weight: 500;">/ pair</span></div>
+                        <span class="price-note">Kitchen/household only (no hair shears/clippers)</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="service-card">
+                <img src="https://images.unsplash.com/photo-1416879595882-3373a0480b5b?auto=format&fit=crop&w=600&q=80" alt="Garden tools and mower blades" class="service-img">
+                <div class="service-content">
+                    <div>
+                        <h3>Garden & Mower Blades</h3>
+                        <p>Hand pruners, loppers, hedge shears ($12), and balanced lawnmower blades ($15).</p>
+                    </div>
+                    <div>
+                        <div class="price">$12 – $15</div>
+                        <span class="price-note">Mower blades must be removed prior to pickup</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="pricing-disclaimer">
+            <strong>Pickup, Turnaround & Repair Policies:</strong><br>
+            • <strong>Free Local Pickup & Delivery:</strong> Applies to orders of <strong>3 or more items</strong> within 15 miles of Carnegie, PA (Downtown Pittsburgh, South Hills, Robinson, Moon, Greentree, and surrounding areas). Orders under 3 items can be picked up for a flat <strong>$5 travel fee</strong>.<br>
+            • <strong>Turnaround & Rush Service:</strong> Standard turnaround is <strong>24 hours</strong> (24–48 hours for Artisan Whetstone orders). Same-day rush service is available upon request for standard sharpening orders for a <strong>$10 flat rush fee</strong>.<br>
+            • <strong>Blade Repairs:</strong> Heavily chipped edges or broken knife tips require an additional <strong>$3–$5</strong> depending on severity.
+        </div>
+    </section>
+
+    <section id="process" style="padding-top: 1rem;">
+        <h2>How It Works</h2>
+        <p class="section-subtitle">Getting your blades sharpened is effortless.</p>
+        <div class="process-steps">
+            <div class="step">
+                <div class="step-number">1</div>
+                <h3>Text or Request Pickup</h3>
+                <p>Text <strong>(412) 897-3119</strong> or fill out the form below with what you need sharpened (let us know if you want Standard or Artisan Whetstone) and your address.</p>
+            </div>
+            <div class="step">
+                <div class="step-number">2</div>
+                <h3>Porch Pickup & Sharpening</h3>
+                <p>Wrap your blades safely in a dish towel or cardboard sleeve. We pick them up and precision-sharpen them in our shop.</p>
+            </div>
+            <div class="step">
+                <div class="step-number">3</div>
+                <h3>24-Hour Delivery</h3>
+                <p>Your razor-sharp blades are returned right to your door. Pay easily upon delivery.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2>Schedule a Pickup</h2>
+        <p class="section-subtitle">Fastest response: Text or call us directly at (412) 897-3119.</p>
+        
+        <div class="contact-wrapper">
+            <div class="contact-info">
+                <h3>Contact Details</h3>
+                <p>Have a question about a specific blade or want to check if you're in our 15-mile free pickup zone? Reach out anytime.</p>
+                
+                <div class="contact-detail">
+                    <strong>Call or Text (Fastest)</strong>
+                    <a href="tel:4128973119">(412) 897-3119</a>
+                </div>
+
+                <div class="contact-detail">
+                    <strong>Email</strong>
+                    <a href="mailto:SteelCitySharpening@gmail.com">SteelCitySharpening@gmail.com</a>
+                </div>
+
+                <div class="contact-detail">
+                    <strong>Service Area</strong>
+                    <span style="color: var(--text-main);">Carnegie, PA & 15-Mile Surrounding Radius</span>
+                </div>
+            </div>
+
+            <form action="https://formsubmit.co/SteelCitySharpening@gmail.com" method="POST">
+                <input type="hidden" name="_subject" value="New Pickup Request - Steel City Sharpening">
+                <input type="hidden" name="_captcha" value="false">
+
+                <div class="form-group">
+                    <label for="name">Your Name</label>
+                    <input type="text" id="name" name="name" required placeholder="Jane Smith">
+                </div>
+                <div class="form-group">
+                    <label for="phone">Phone Number (for pickup coordination)</label>
+                    <input type="tel" id="phone" name="phone" required placeholder="(412) 555-0199">
+                </div>
+                <div class="form-group">
+                    <label for="location">Neighborhood / Zip Code</label>
+                    <input type="text" id="location" name="location" required placeholder="e.g., Mt. Lebanon, 15228">
+                </div>
+                <div class="form-group">
+                    <label for="message">Items to Sharpen & Service Tier</label>
+                    <textarea id="message" name="message" required placeholder="e.g., 3 standard kitchen knives, 1 Japanese chef knife (Artisan Whetstone), and 1 pair of kitchen shears."></textarea>
+                </div>
+                <button type="submit" class="btn-primary form-submit">Request Pickup</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Steel City Sharpening. Locally Owned & Operated in Carnegie, PA.</p>
+    </footer>
+
+</body>
+</html>
