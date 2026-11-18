@@ -10,9 +10,9 @@
             --bg-color: #111113;
             --card-bg: #19191d;
             --card-hover: #202026;
-            --accent: #f97316; /* Forge Orange */
-            --accent-hover: #ea580c;
-            --gold: #eab308; /* Artisan Tier Accent */
+            --accent: #FFB612; /* Pittsburgh Gold */
+            --accent-hover: #E3A008; /* Deeper Gold on Hover */
+            --gold: #FFB612; /* Artisan Tier Accent */
             --text-main: #f4f4f5;
             --text-muted: #a1a1aa;
             --border: #27272a;
@@ -70,7 +70,7 @@
 
         .nav-phone {
             background: var(--accent);
-            color: #fff;
+            color: #111113; /* Dark text for high contrast on gold */
             padding: 0.55rem 1.1rem;
             border-radius: 4px;
             text-decoration: none;
@@ -94,9 +94,9 @@
 
         .badge {
             display: inline-block;
-            background: rgba(249, 115, 22, 0.15);
+            background: rgba(255, 182, 18, 0.15);
             color: var(--accent);
-            border: 1px solid rgba(249, 115, 22, 0.4);
+            border: 1px solid rgba(255, 182, 18, 0.4);
             padding: 0.35rem 0.9rem;
             border-radius: 999px;
             font-size: 0.85rem;
@@ -132,7 +132,7 @@
         .btn-primary {
             display: inline-block;
             background: var(--accent);
-            color: white;
+            color: #111113;
             padding: 0.9rem 2rem;
             font-size: 1rem;
             font-weight: 700;
@@ -243,7 +243,7 @@
         }
 
         .service-card.artisan {
-            border-color: rgba(234, 179, 8, 0.45);
+            border-color: rgba(255, 182, 18, 0.45);
         }
 
         .service-card.artisan:hover {
@@ -252,7 +252,7 @@
 
         .artisan-tag {
             display: inline-block;
-            background: rgba(234, 179, 8, 0.15);
+            background: rgba(255, 182, 18, 0.15);
             color: var(--gold);
             font-size: 0.75rem;
             font-weight: 800;
@@ -343,7 +343,7 @@
             width: 44px;
             height: 44px;
             background: var(--accent);
-            color: white;
+            color: #111113;
             font-weight: 800;
             font-size: 1.1rem;
             line-height: 44px;
@@ -582,9 +582,9 @@
 
         <div class="pricing-disclaimer">
             <strong>Pickup, Turnaround & Repair Policies:</strong><br>
-            • <strong>Free Local Pickup & Delivery:</strong> Applies to orders of <strong>3 or more items</strong> within 15 miles of Carnegie, PA (Downtown Pittsburgh, South Hills, Robinson, Moon, Greentree, and surrounding areas). Orders under 3 items can be picked up for a flat <strong>$5 travel fee</strong>.<br>
-            • <strong>Turnaround & Rush Service:</strong> Standard turnaround is <strong>24 hours</strong> (24–48 hours for Artisan Whetstone orders). Same-day rush service is available upon request for standard sharpening orders for a <strong>$10 flat rush fee</strong>.<br>
-            • <strong>Blade Repairs:</strong> Heavily chipped edges or broken knife tips require an additional <strong>$3–$5</strong> depending on severity.
+            - <strong>Free Local Pickup & Delivery:</strong> Applies to orders of <strong>3 or more items</strong> within 15 miles of Carnegie, PA (Downtown Pittsburgh, South Hills, Robinson, Moon, Greentree, and surrounding areas). Orders under 3 items can be picked up for a flat <strong>$5 travel fee</strong>.<br>
+            - <strong>Turnaround & Rush Service:</strong> Standard turnaround is <strong>24 hours</strong> (24–48 hours for Artisan Whetstone orders). Same-day rush service is available upon request for standard sharpening orders for a <strong>$10 flat rush fee</strong>.<br>
+            - <strong>Blade Repairs:</strong> Heavily chipped edges or broken knife tips require an additional <strong>$3–$5</strong> depending on severity.
         </div>
     </section>
 
@@ -635,28 +635,13 @@
                 </div>
             </div>
 
-         <form action="https://formsubmit.co/SteelCitySharpening@gmail.com" method="POST">
-    <input type="hidden" name="_subject" value="New Pickup Request - Steel City Sharpening">
-    <input type="hidden" name="_captcha" value="false">
-    
-    <div style="margin-bottom: 15px;">
-        <label style="display: block; margin-bottom: 5px; font-weight: bold;">Your Name</label>
-        <input type="text" name="name" required style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 4px;">
-    </div>
-    <div style="margin-bottom: 15px;">
-        <label style="display: block; margin-bottom: 5px; font-weight: bold;">Email Address</label>
-        <input type="email" name="email" required style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 4px;">
-    </div>
-    <div style="margin-bottom: 15px;">
-        <label style="display: block; margin-bottom: 5px; font-weight: bold;">Phone Number</label>
-        <input type="tel" name="phone" required style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 4px;">
-    </div>
-    <div style="margin-bottom: 15px;">
-        <label style="display: block; margin-bottom: 5px; font-weight: bold;">Items to Sharpen & Notes</label>
-        <textarea name="message" rows="4" required style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 4px;"></textarea>
-    </div>
-    <button type="submit" style="background: #e67e22; color: white; padding: 12px 20px; border: none; border-radius: 4px; font-weight: bold; cursor: pointer;">Request Pickup</button>
-</form>
+            <div class="contact-form-container">
+                <a href="mailto:SteelCitySharpening@gmail.com?subject=New%20Pickup%20Request%20-%20Steel%20City%20Sharpening&body=Hi,%20I%20would%20like%20to%20request%20a%20pickup.%0A%0AMy%20Name:%20%0AMy%20Phone:%20%0AMy%20Address%20/%20Neighborhood:%20%0AItems%20to%20Sharpen:%20" style="display: block; text-align: center; background: #FFB612; color: #111113; padding: 20px; text-decoration: none; border-radius: 6px; font-weight: bold; font-size: 1.1rem; box-shadow: 0 4px 6px rgba(0,0,0,0.2);">Email Us for Pickup Request</a>
+                <p style="text-align: center; margin-top: 1rem; color: var(--text-muted); font-size: 0.9rem;">Clicking above opens your email client with your request template ready to send.</p>
+            </div>
+        </div>
+    </section>
+
     <footer>
         <p>&copy; 2026 Steel City Sharpening. Locally Owned & Operated in Carnegie, PA.</p>
     </footer>
