@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Steel City Sharpening | Mobile & Pickup Knife Sharpening in Pittsburgh</title>
-    <meta name="description" content="Professional knife, artisan whetstone, kitchen shear, and garden tool sharpening in Carnegie & Greater Pittsburgh. Free local pickup & delivery within 15 miles (3-item minimum).">
+    <meta name="description" content="Professional knife, artisan whetstone, kitchen shear, and garden tool sharpening in Carnegie & Pittsburgh. Free local pickup & delivery within ~10 miles of Carnegie ($30 order minimum).">
     <style>
         :root {
             --bg-color: #111113;
@@ -43,19 +43,31 @@
             position: sticky;
             top: 0;
             z-index: 100;
-            padding: 1rem 2rem;
+            padding: 0.85rem 2rem;
             display: flex;
             justify-content: space-between;
             align-items: center;
         }
 
         .logo {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
             font-size: 1.25rem;
             font-weight: 900;
             letter-spacing: 0.5px;
             color: var(--text-main);
             text-transform: uppercase;
             text-decoration: none;
+        }
+
+        .logo-img {
+            width: 42px;
+            height: 42px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 2px solid var(--accent);
+            flex-shrink: 0;
         }
 
         .logo span {
@@ -85,11 +97,22 @@
 
         /* Hero Section */
         .hero {
-            padding: 6rem 2rem;
+            padding: 5rem 2rem 6rem 2rem;
             text-align: center;
             background: linear-gradient(rgba(17, 17, 19, 0.82), rgba(17, 17, 19, 0.96)), 
                         url('https://images.unsplash.com/photo-1589365278144-c9e705f423ba?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;
             border-bottom: 1px solid var(--border);
+        }
+
+        .hero-logo {
+            width: 112px;
+            height: 112px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid var(--accent);
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.6);
+            margin: 0 auto 1.25rem auto;
+            display: block;
         }
 
         .badge {
@@ -399,252 +422,4 @@
             color: var(--text-main);
             text-decoration: none;
             font-size: 1.1rem;
-            font-weight: 600;
-        }
-
-        .contact-detail a:hover {
-            color: var(--accent);
-        }
-
-        .form-group {
-            margin-bottom: 1.15rem;
-        }
-
-        .form-group label {
-            display: block;
-            margin-bottom: 0.4rem;
-            font-weight: 600;
-            font-size: 0.9rem;
-        }
-
-        .form-group input, .form-group textarea {
-            width: 100%;
-            padding: 0.75rem;
-            background: var(--bg-color);
-            border: 1px solid var(--border);
-            border-radius: 4px;
-            color: white;
-            font-family: inherit;
-            font-size: 0.95rem;
-        }
-
-        .form-group input:focus, .form-group textarea:focus {
-            outline: none;
-            border-color: var(--accent);
-        }
-
-        .form-group textarea {
-            resize: vertical;
-            height: 110px;
-        }
-
-        .form-submit {
-            width: 100%;
-            border: none;
-            cursor: pointer;
-        }
-
-        /* Footer */
-        footer {
-            text-align: center;
-            padding: 3rem 2rem;
-            border-top: 1px solid var(--border);
-            color: var(--text-muted);
-            font-size: 0.85rem;
-        }
-
-        @media (max-width: 768px) {
-            .contact-wrapper {
-                grid-template-columns: 1fr;
-                padding: 1.75rem;
-            }
-        }
-
-        @media (max-width: 600px) {
-            header { padding: 1rem; }
-            .hero { padding: 4rem 1.25rem; }
-            section { padding: 3.5rem 1.25rem; }
-        }
-    </style>
-</head>
-<body>
-
-    <header>
-        <a href="#" class="logo">Steel City <span>Sharpening</span></a>
-        <div class="header-actions">
-            <a href="tel:4128973119" class="nav-phone">Call / Text: (412) 897-3119</a>
-        </div>
-    </header>
-
-    <section class="hero">
-        <div class="badge">Carnegie & Greater Pittsburgh Area</div>
-        <h1>Razor-Sharp Edges,<br>Picked Up At Your Door</h1>
-        <p>Professional sharpening for kitchen knives, outdoor & pocket blades, artisan whetstone edges, kitchen shears, and garden tools. Fast 24-hour turnaround with free local pickup and delivery.</p>
-        <div class="hero-buttons">
-            <a href="sms:4128973119" class="btn-primary">Text to Schedule Pickup</a>
-            <a href="#pricing" class="btn-secondary">View Pricing</a>
-        </div>
-    </section>
-
-    <div class="highlights">
-        <div class="highlights-inner">
-            <div class="highlight-item">
-                <strong>Free Pickup & Delivery</strong>
-                <span>Within 15 miles of Carnegie (3-item min)</span>
-            </div>
-            <div class="highlight-item">
-                <strong>24-Hour Turnaround</strong>
-                <span>Same-day rush available (+$10 fee)</span>
-            </div>
-            <div class="highlight-item">
-                <strong>Upfront Pricing</strong>
-                <span>No hidden fees or surprise charges</span>
-            </div>
-        </div>
-    </div>
-
-    <section id="pricing">
-        <h2>Services & Upfront Pricing</h2>
-        <p class="section-subtitle">Precision sharpening tailored to each blade's steel and geometry.</p>
-        
-        <div class="services-grid">
-            <div class="service-card">
-                <img src="https://images.unsplash.com/photo-1593618998160-e34014e67546?auto=format&fit=crop&w=600&q=80" alt="Chef knives" class="service-img">
-                <div class="service-content">
-                    <div>
-                        <h3>Kitchen & Chef Knives</h3>
-                        <p>Chef's knives, santoku, paring, utility, carving, and bread/serrated knives restored to factory-new sharpness.</p>
-                    </div>
-                    <div>
-                        <div class="price">$8 <span style="font-size: 1rem; font-weight: 500;">/ knife</span></div>
-                        <span class="price-note">+$3–$5 for broken tip or heavy chip repair</span>
-                    </div>
-                </div>
-            </div>
-
-            <div class="service-card">
-               <img src="edc-and-hunting-knives.jpg" alt="Pocket and outdoor knives" class="service-img">
-                <div class="service-content">
-                    <div>
-                        <h3>Pocket, Hunting & Outdoor</h3>
-                        <p>Folding EDC knives, fixed-blade hunting knives, camp knives, and bushcraft blades.</p>
-                    </div>
-                    <div>
-                        <div class="price">$8 <span style="font-size: 1rem; font-weight: 500;">/ knife</span></div>
-                        <span class="price-note">Custom bevel angles available on request</span>
-                    </div>
-                </div>
-            </div>
-
-            <div class="service-card artisan">
-                <img src="artisan-sharpening.jpg" alt="Artisan hand whetstone sharpening" class="service-img">
-                <div class="service-content">
-                    <div>
-                        <span class="artisan-tag">Knives Only • Premium Care</span>
-                        <h3>Artisan Hand-Whetstone</h3>
-                        <p>100% hand-sharpened and polished on Japanese water stones through high-grit progression and leather strop. Ideal for high-end Japanese steel, custom, and collector knives.</p>
-                    </div>
-                    <div>
-                        <div class="price">$18 <span style="font-size: 1rem; font-weight: 500;">/ knife</span></div>
-                        <span class="price-note">24–48 hr turnaround (not eligible for same-day rush)</span>
-                    </div>
-                </div>
-            </div>
-
-            <div class="service-card">
-                <img src="kitchen-shears.jpg" alt="Kitchen shears" class="service-img">
-                <div class="service-content">
-                    <div>
-                        <h3>Kitchen Shears</h3>
-                        <p>Heavy-duty kitchen shears, poultry shears, and standard household scissors.</p>
-                    </div>
-                    <div>
-                        <div class="price">$10 <span style="font-size: 1rem; font-weight: 500;">/ pair</span></div>
-                        <span class="price-note">Kitchen/household only (no hair shears/clippers)</span>
-                    </div>
-                </div>
-            </div>
-
-            <div class="service-card">
-                <img src="https://images.unsplash.com/photo-1416879595882-3373a0480b5b?auto=format&fit=crop&w=600&q=80" alt="Garden tools and mower blades" class="service-img">
-                <div class="service-content">
-                    <div>
-                        <h3>Garden & Mower Blades</h3>
-                        <p>Hand pruners, loppers, hedge shears ($12), and balanced lawnmower blades ($15).</p>
-                    </div>
-                    <div>
-                        <div class="price">$12 – $15</div>
-                        <span class="price-note">Mower blades must be removed prior to pickup</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="pricing-disclaimer">
-            <strong>Pickup, Turnaround & Repair Policies:</strong><br>
-            - <strong>Free Local Pickup & Delivery:</strong> Applies to orders of <strong>3 or more items</strong> within 15 miles of Carnegie, PA (Downtown Pittsburgh, South Hills, Robinson, Moon, Greentree, and surrounding areas). Orders under 3 items can be picked up for a flat <strong>$5 travel fee</strong>.<br>
-            - <strong>Turnaround & Rush Service:</strong> Standard turnaround is <strong>24 hours</strong> (24–48 hours for Artisan Whetstone orders). Same-day rush service is available upon request for standard sharpening orders for a <strong>$10 flat rush fee</strong>.<br>
-            - <strong>Blade Repairs:</strong> Heavily chipped edges or broken knife tips require an additional <strong>$3–$5</strong> depending on severity.
-        </div>
-    </section>
-
-    <section id="process" style="padding-top: 1rem;">
-        <h2>How It Works</h2>
-        <p class="section-subtitle">Getting your blades sharpened is effortless.</p>
-        <div class="process-steps">
-            <div class="step">
-                <div class="step-number">1</div>
-                <h3>Text or Request Pickup</h3>
-                <p>Text <strong>(412) 897-3119</strong> or fill out the form below with what you need sharpened (let us know if you want Standard or Artisan Whetstone) and your address.</p>
-            </div>
-            <div class="step">
-                <div class="step-number">2</div>
-                <h3>Porch Pickup & Sharpening</h3>
-                <p>Wrap your blades safely in a dish towel or cardboard sleeve. We pick them up and precision-sharpen them in our shop.</p>
-            </div>
-            <div class="step">
-                <div class="step-number">3</div>
-                <h3>24-Hour Delivery</h3>
-                <p>Your razor-sharp blades are returned right to your door. Pay easily upon delivery.</p>
-            </div>
-        </div>
-    </section>
-
-    <section id="contact">
-        <h2>Schedule a Pickup</h2>
-        <p class="section-subtitle">Fastest response: Text or call us directly at (412) 897-3119.</p>
-        
-        <div class="contact-wrapper">
-            <div class="contact-info">
-                <h3>Contact Details</h3>
-                <p>Have a question about a specific blade or want to check if you're in our 15-mile free pickup zone? Reach out anytime.</p>
-                
-                <div class="contact-detail">
-                    <strong>Call or Text (Fastest)</strong>
-                    <a href="tel:4128973119">(412) 897-3119</a>
-                </div>
-
-                <div class="contact-detail">
-                    <strong>Email</strong>
-                    <a href="mailto:SteelCitySharpening@gmail.com">SteelCitySharpening@gmail.com</a>
-                </div>
-
-                <div class="contact-detail">
-                    <strong>Service Area</strong>
-                    <span style="color: var(--text-main);">Carnegie, PA & 15-Mile Surrounding Radius</span>
-                </div>
-            </div>
-
-            <div class="contact-form-container">
-                <a href="mailto:SteelCitySharpening@gmail.com?subject=New%20Pickup%20Request%20-%20Steel%20City%20Sharpening&body=Hi,%20I%20would%20like%20to%20request%20a%20pickup.%0A%0AMy%20Name:%20%0AMy%20Phone:%20%0AMy%20Address%20/%20Neighborhood:%20%0AItems%20to%20Sharpen:%20" style="display: block; text-align: center; background: #FFB612; color: #111113; padding: 20px; text-decoration: none; border-radius: 6px; font-weight: bold; font-size: 1.1rem; box-shadow: 0 4px 6px rgba(0,0,0,0.2);">Email Us for Pickup Request</a>
-                <p style="text-align: center; margin-top: 1rem; color: var(--text-muted); font-size: 0.9rem;">Clicking above opens your email client with your request template ready to send.</p>
-            </div>
-        </div>
-    </section>
-
-    <footer>
-        <p>&copy; 2026 Steel City Sharpening. Locally Owned & Operated in Carnegie, PA.</p>
-    </footer>
-
-</body>
-</html>
+            font-weight: 6
